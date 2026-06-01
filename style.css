@@ -789,6 +789,28 @@ a {
   color: var(--bone-soft);
 }
 
+.runway-watch {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.66rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--crimson);
+  border-bottom: var(--hair) solid var(--crimson);
+  padding-bottom: 0.12rem;
+  transition: color 240ms var(--tx-fade), border-bottom-color 240ms var(--tx-fade);
+}
+
+.runway-watch:hover {
+  color: var(--bone);
+  border-bottom-color: var(--bone);
+}
+
+.runway-list li:hover .runway-watch { color: inherit; }
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    N° 05 — inquiries
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
