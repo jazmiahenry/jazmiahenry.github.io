@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Maison J·H</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@400;500&family=Italiana&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .four-oh-four {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 7rem var(--gutter) 4rem;
+    }
+    .four-oh-four-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: var(--letter-loose);
+      color: var(--bone-faint);
+    }
+    .four-oh-four-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .four-oh-four-number {
+      font-family: var(--display);
+      font-size: clamp(8rem, 28vw, 24rem);
+      line-height: 0.85;
+      color: var(--bone);
+    }
+    .four-oh-four-tag {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.3rem, 1.8vw, 2rem);
+      color: var(--bone-soft);
+      max-width: 36ch;
+    }
+    .four-oh-four-back {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: var(--letter-loose);
+      color: var(--crimson);
+      width: fit-content;
+      border-bottom: 1px solid var(--crimson);
+      padding-bottom: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="four-oh-four">
+    <div class="four-oh-four-meta">
+      <span class="serial">N° — / Hors collection</span>
+      <span>Quatre cent quatre</span>
+    </div>
+    <div class="four-oh-four-body">
+      <h1 class="four-oh-four-number">404</h1>
+      <p class="four-oh-four-tag">
+        <em>This look has left the runway.</em> The page you sought is no longer in season.
+      </p>
+      <a class="four-oh-four-back" href="/">Return to the atelier →</a>
+    </div>
+    <div class="four-oh-four-meta">
+      <span>Maison J·H</span>
+      <span>Est. MMXXVI</span>
+    </div>
+  </main>
+</body>
+</html>
