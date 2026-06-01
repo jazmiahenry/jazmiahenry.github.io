@@ -200,29 +200,6 @@ a {
   margin-top: -0.05em;
 }
 
-.hero-name::before,
-.hero-name::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  white-space: pre;
-  pointer-events: none;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  font: inherit;
-  letter-spacing: inherit;
-  line-height: inherit;
-  transition: opacity 200ms var(--tx-fade);
-}
-
-/* glitch layers — MCR coded */
-.hero-name::before { color: var(--crimson-bright); transform: translate(-0.18em, 0.05em); }
-.hero-name::after  { color: var(--champagne);       transform: translate( 0.14em,-0.04em); mix-blend-mode: difference; }
-
-.hero-name:hover::before,
-.hero-name:hover::after { opacity: 0.55; }
-
 .hero-slash {
   width: clamp(120px, 30vw, 360px);
   height: 1px;
