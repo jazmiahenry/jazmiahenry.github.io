@@ -117,19 +117,122 @@
         <article class="garment garment-wide">
           <span class="garment-tag">Look 01 — Atelier piece</span>
           <h3 class="garment-name">RIGGs · Collide</h3>
-          <p class="garment-house">2025 — present · Principal MTS, AI/ML</p>
+          <p class="garment-house">2025 — present · Principal MTS, AI/ML · Backed by Mercury Fund</p>
           <p class="garment-desc">
-            Full ownership of the RIGGs platform. <strong>miniRIGGs</strong> — an
-            8B model trained via simulation-driven fine-tuning — completes the
-            standardized PE exam in fifteen minutes versus Grok-4's two hours
-            and scores 35% against the Llama 3.1 baseline's 18%.
-            <strong>BigRIGGs</strong> — 120B MoE on a 55B-token domain corpus —
-            ships with a 16-dimensional reward system, simulation environments
-            for retrieval, routing, and long-context reasoning, and a
-            multimodal embedding stack pairing SigLIP with EVA02-CLIP under a
-            four-stage curriculum. Sub-100ms response on the MoE at production
-            load via sparse expert routing.
+            Full ownership of the RIGGs platform — a purpose-built
+            mixture-of-experts LLM for petroleum engineering, trained on
+            Collide's on-premise <em>Spindletop</em> cluster (NVIDIA Blackwell
+            6000 Max-Q · AMD Threadripper PRO). <strong>miniRIGGs</strong> — an
+            8B variant — outperforms GPT 5.1, Claude Sonnet 4.5, and Grok 4 on
+            the SPE petroleum engineering exam at orders of magnitude smaller
+            scale. <strong>BigRIGGs</strong> — 120B MoE on a 55B+ token domain
+            corpus — ships with a 16-dimensional reward system, simulation
+            environments for retrieval, routing, calculation, and long-context
+            reasoning, and a custom multimodal embedding stack. Sub-100ms
+            response on the MoE at production load via sparse expert routing.
           </p>
+
+          <div class="garment-block">
+            <h4 class="block-label">N° 01 — Benchmark</h4>
+            <p class="block-caption">
+              SPE Petroleum Engineering Exam · 40-question subset · May 2026
+            </p>
+            <table class="metrics-table">
+              <thead>
+                <tr><th>Model</th><th>Score</th><th>Time</th></tr>
+              </thead>
+              <tbody>
+                <tr class="is-headline"><td>RIGGs</td><td>67.5 %</td><td>15 min</td></tr>
+                <tr><td><em>Grok 4</em></td><td>62.5 %</td><td>2 hr</td></tr>
+                <tr><td><em>Claude Sonnet 4.5</em></td><td>52.5 %</td><td>—</td></tr>
+                <tr><td><em>GPT 5.1</em></td><td>4.0 %</td><td>—</td></tr>
+              </tbody>
+            </table>
+            <p class="block-footnote">
+              Target accuracy: <strong>75 – 80 %</strong> within the coming
+              quarters.
+            </p>
+          </div>
+
+          <div class="garment-block">
+            <h4 class="block-label">N° 02 — Operational impact</h4>
+            <p class="block-caption">
+              Winn Resources · Texas Railroad Commission filings, W-10 &amp; G-10
+            </p>
+            <ul class="impact-stats">
+              <li>
+                <span class="impact-num">95 %+</span>
+                <span class="impact-label">Processing-time reduction on regulatory filings.</span>
+              </li>
+              <li>
+                <span class="impact-num">50 wells</span>
+                <span class="impact-label">Filed in 20 minutes — a previously multi-hour manual workflow.</span>
+              </li>
+              <li>
+                <span class="impact-num">2.5 ×</span>
+                <span class="impact-label">Accuracy improvement from domain-tool integration.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="garment-block">
+            <h4 class="block-label">N° 03 — Custom embeddings</h4>
+            <p class="block-caption">
+              A specialized retrieval stack for oil &amp; gas — domain tokenizer,
+              vision pairing, and a knowledge graph for grounded reasoning.
+            </p>
+            <ul class="embeddings-list">
+              <li>
+                <strong>PE-smol</strong> — 397M-parameter dense embeddings with
+                a custom oil-and-gas tokenizer.
+              </li>
+              <li>
+                <strong>PE-large</strong> — 7B-parameter multimodal embeddings
+                for subsurface and field-engineering documents.
+              </li>
+              <li>
+                <strong>Vision pairing</strong> — SigLIP <span class="amp">+</span>
+                EVA02-CLIP two-encoder ensemble with expert-aware projection
+                heads and a learnable-temperature sigmoid contrastive loss,
+                trained via a four-stage curriculum (contrastive alignment →
+                ontology grounding → hard-negative mining → cross-modal
+                fine-tune).
+              </li>
+              <li>
+                <strong>Knowledge graph</strong> — Neo4j, 70,071 nodes,
+                652,447 relationships, integrated for retrieval-augmented
+                training and inference.
+              </li>
+            </ul>
+          </div>
+
+          <div class="garment-press">
+            <h4 class="block-label">In the press</h4>
+            <ul class="press-links">
+              <li>
+                <a
+                  href="https://energycapitalhtx.com/collide-riggs-ai-platform"
+                  target="_blank" rel="noopener"
+                >Houston AI startup rolls out platform to reshape oil and gas workflows</a>
+                <span class="press-where">EnergyCapital Houston · Mike Damante · May 2026</span>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/pulse/why-we-built-riggs-purpose-built-llm-oil-gas-fracslap--na7tc/"
+                  target="_blank" rel="noopener"
+                >Why We Built RIGGs — A Purpose-Built LLM for Oil &amp; Gas</a>
+                <span class="press-where">Collin McClelland · LinkedIn · December 2025</span>
+              </li>
+              <li>
+                <a
+                  href="https://collide.io/resources/petroleum-embeddings-oil-gas-retrieval"
+                  target="_blank" rel="noopener"
+                >Petroleum Embeddings — Specialized Retrieval for Oil &amp; Gas</a>
+                <span class="press-where">Collide Resources</span>
+              </li>
+            </ul>
+          </div>
+
           <ul class="garment-stack">
             <li>NeMo</li><li>Megatron-Core</li><li>DeepSpeed ZeRO-3</li>
             <li>FSDP2</li><li>vLLM</li><li>SGLang</li><li>AWS Optimum Neuron</li>
@@ -259,6 +362,23 @@
             <p class="press-meta">
               141,000+ word open-source dataset of African American
               Vernacular English · Stanford HAI · 21★ on GitHub
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="press-mark">N° 07</span>
+          <div>
+            <h3 class="press-title">
+              Your AI Agent Isn't Broken — It's Poorly Designed
+            </h3>
+            <p class="press-meta">
+              Jazmia Henry · <em>Medium</em> · June 2025 — A tripartite
+              framework (conceptual · empirical · technical) for designing
+              production AI agents.
+              <a
+                href="https://medium.com/@jazmia.henry/your-ai-agent-isnt-broken-it-s-poorly-designed-19f296392484"
+                target="_blank" rel="noopener"
+              >Read &nbsp;→</a>
             </p>
           </div>
         </li>

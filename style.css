@@ -424,6 +424,247 @@ a {
   font-style: italic;
 }
 
+/* internal sub-blocks within a garment card (benchmark, impact, embeddings, press) */
+.garment-block,
+.garment-press {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: var(--hair) solid var(--ink-line);
+}
+
+.block-label {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--champagne);
+  margin-bottom: 0.55rem;
+}
+
+.block-caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--bone-faint);
+  margin-bottom: 1.4rem;
+  max-width: 60ch;
+}
+
+.block-footnote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--bone-faint);
+  margin-top: 0.9rem;
+  max-width: 60ch;
+}
+
+.block-footnote strong {
+  font-style: normal;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-tight);
+  color: var(--bone);
+}
+
+/* benchmark table */
+.metrics-table {
+  width: 100%;
+  max-width: 36rem;
+  border-collapse: collapse;
+  font-family: var(--serif);
+}
+
+.metrics-table th,
+.metrics-table td {
+  text-align: left;
+  padding: 0.85rem 1.4rem 0.85rem 0;
+  border-bottom: var(--hair) solid var(--ink-line);
+  font-weight: 300;
+  color: var(--bone-soft);
+  vertical-align: baseline;
+}
+
+.metrics-table th {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--bone-faint);
+  padding-bottom: 0.55rem;
+  border-bottom-color: var(--bone-faint);
+}
+
+.metrics-table td:first-child { font-size: 1rem; }
+
+.metrics-table td:nth-child(2),
+.metrics-table td:nth-child(3),
+.metrics-table th:nth-child(2),
+.metrics-table th:nth-child(3) {
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  text-align: right;
+  font-weight: 400;
+  color: var(--bone);
+}
+
+.metrics-table th:nth-child(2),
+.metrics-table th:nth-child(3) {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+}
+
+.metrics-table tr.is-headline td {
+  color: var(--bone);
+  font-weight: 400;
+}
+
+.metrics-table tr.is-headline td:first-child {
+  position: relative;
+  padding-left: 1.4rem;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  letter-spacing: -0.005em;
+}
+
+.metrics-table tr.is-headline td:first-child::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 0.9rem; height: var(--hair);
+  background: var(--crimson);
+  transform: translateY(-50%);
+}
+
+.metrics-table tr.is-headline td:nth-child(2) {
+  color: var(--bone);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* operational impact stat tiles */
+.impact-stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  max-width: 60rem;
+}
+
+.impact-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding-left: 1.2rem;
+  border-left: var(--hair) solid var(--crimson);
+}
+
+.impact-num {
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  line-height: 0.95;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+}
+
+.impact-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--bone-soft);
+  max-width: 28ch;
+}
+
+/* embeddings list */
+.embeddings-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--bone-soft);
+  max-width: 62ch;
+}
+
+.embeddings-list strong {
+  color: var(--bone);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.embeddings-list .amp {
+  color: var(--crimson);
+  padding: 0 0.2rem;
+  font-style: normal;
+}
+
+/* press mentions inside the garment */
+.press-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.press-links li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.press-links a {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--bone);
+  border-bottom: var(--hair) solid var(--ink-line);
+  padding-bottom: 0.25rem;
+  width: fit-content;
+  max-width: 100%;
+  transition: border-color 240ms var(--tx-fade), color 240ms var(--tx-fade);
+}
+
+.press-links a:hover {
+  color: var(--crimson);
+  border-bottom-color: var(--crimson);
+}
+
+.press-where {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--bone-faint);
+}
+
+/* the "Read →" affordance attached to a press-meta line in archives */
+.press-meta a {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--crimson);
+  border-bottom: var(--hair) solid var(--crimson);
+  padding-bottom: 0.12rem;
+  transition: color 240ms var(--tx-fade), border-bottom-color 240ms var(--tx-fade);
+}
+
+.press-meta a:hover {
+  color: var(--bone);
+  border-bottom-color: var(--bone);
+}
+
 .garment-stack {
   display: flex;
   flex-wrap: wrap;
@@ -727,6 +968,10 @@ a {
   .press-list li,
   .runway-list li,
   .contact-list li { grid-template-columns: 1fr; gap: 0.6rem; }
+
+  .impact-stats { grid-template-columns: 1fr; gap: 1.4rem; }
+  .metrics-table th,
+  .metrics-table td { padding-right: 0.5rem; }
 
   .runway-list li { padding: 1.6rem 0; }
 
