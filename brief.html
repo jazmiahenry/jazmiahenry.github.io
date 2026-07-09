@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brief — Jazmia Henry</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="A private brief for recruiters and hiring partners." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Italiana&family=JetBrains+Mono:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="constellation.css" />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='16' y='22' font-family='serif' font-size='18' fill='%23f0e8d8' text-anchor='middle'>JH</text></svg>" />
+</head>
+
+<body class="constellation-page brief-page">
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- passphrase gate -->
+  <div class="gate" id="gate">
+    <span class="gate-serial">Maison J·H · Private brief</span>
+    <h1 class="gate-title">The <em>Brief</em></h1>
+    <p class="gate-sub">
+      A private room for recruiters and hiring partners. Enter the passphrase
+      shared with you to see the constellation, tailor a résumé to your role,
+      or map an existing résumé to its evidence.
+    </p>
+    <form class="gate-field" id="gate-form">
+      <input class="gate-input" id="gate-input" type="password" placeholder="Passphrase" autocomplete="off" aria-label="Passphrase" />
+      <button class="gate-submit" type="submit">Enter</button>
+    </form>
+    <div class="gate-error" id="gate-error">That passphrase doesn't match. Try again.</div>
+  </div>
+
+  <!-- the living graph (same engine) -->
+  <div class="stage">
+    <canvas id="constellation-canvas"></canvas>
+  </div>
+
+  <button class="brief-toggle" id="brief-toggle" type="button">✦ Open the brief</button>
+
+  <!-- oracle (recruiters can also just ask) -->
+  <div class="oracle">
+    <form class="oracle-field" onsubmit="return false;">
+      <span class="oracle-glyph" aria-hidden="true">✦</span>
+      <input class="oracle-input" type="text" autocomplete="off" spellcheck="false"
+        placeholder="Ask — “Show me her evaluation work”" aria-label="Ask about the work" />
+      <button class="oracle-submit" type="submit">Ask</button>
+    </form>
+    <div class="oracle-answer" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="legend" aria-label="Constellations"><div class="legend-title">The constellations</div><div class="legend-items"></div></div>
+  <div class="stage-controls"><button id="reset-view" type="button">Reset view</button></div>
+
+  <!-- detail panel (shared with constellation.js) -->
+  <aside class="panel" id="panel" aria-label="Detail"></aside>
+
+  <!-- the brief sheet -->
+  <aside class="brief" id="brief">
+    <button class="brief-close" id="brief-close" aria-label="Close">&times;</button>
+    <div class="brief-kicker">Tailor to your role</div>
+    <h2 class="brief-title">The Brief</h2>
+    <p class="brief-intro">
+      Paste a role and generate a résumé tailored to it — the constellation lights
+      the exact evidence behind every claim. Or paste an existing résumé and the
+      map re-lights to show where each line is proven.
+    </p>
+
+    <div class="brief-modes" role="tablist">
+      <button class="brief-mode" id="mode-role" role="tab" aria-selected="true">I have a role</button>
+      <button class="brief-mode" id="mode-resume" role="tab" aria-selected="false">I have a résumé</button>
+    </div>
+
+    <textarea class="brief-textarea" id="brief-input"
+      placeholder="Paste the job description / role requirements here…"></textarea>
+
+    <div class="brief-actions">
+      <button class="brief-generate" id="brief-generate" type="button">Generate</button>
+      <button class="brief-secondary" id="brief-clear" type="button">Clear</button>
+    </div>
+
+    <div class="brief-output" id="brief-output"></div>
+    <p class="brief-note">
+      Everything here is generated in your browser from a curated knowledge graph
+      of Jazmia's public work — nothing you paste leaves this page. Company work
+      appears as a tagged synopsis; proprietary code is never shown.
+    </p>
+  </aside>
+
+  <script src="knowledge.js"></script>
+  <script src="constellation.js" defer></script>
+  <script src="brief.js" defer></script>
+</body>
+</html>

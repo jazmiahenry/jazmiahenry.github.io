@@ -865,6 +865,78 @@ a {
 .contact-list a:hover { color: var(--crimson); border-bottom-color: var(--crimson); }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   N° 06 — constellation invitation
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.constellation-invite .section-head .serial { color: var(--champagne); }
+
+.invite-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.invite-lede {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--bone);
+  max-width: 26ch;
+}
+.invite-lede em { font-style: italic; color: var(--champagne); }
+
+.invite-facts { list-style: none; display: flex; flex-direction: column; gap: 1.4rem; }
+.invite-facts li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding-left: 1.2rem;
+  border-left: var(--hair) solid var(--crimson);
+}
+.invite-num {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  line-height: 0.95;
+  color: var(--bone);
+}
+.invite-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--bone-soft);
+}
+
+.invite-cta {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-loose);
+  color: var(--bone);
+  width: fit-content;
+}
+.invite-cta-line {
+  display: inline-block;
+  width: 4rem; height: var(--hair);
+  background: var(--champagne);
+  transition: width 360ms var(--tx-fade), background 360ms var(--tx-fade);
+}
+.invite-cta:hover { color: var(--champagne); }
+.invite-cta:hover .invite-cta-line { width: 7rem; background: var(--crimson); }
+
+@media (max-width: 720px) {
+  .invite-body { grid-template-columns: 1fr; }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    footer
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 

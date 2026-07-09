@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Constellation — Jazmia Henry</title>
+  <meta name="description" content="A living map of Jazmia Henry's work — repositories, papers, patents, datasets, writing and talks across reinforcement learning, foundation models, evaluation and AI ethics. Ask it anything." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Italiana&family=JetBrains+Mono:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="constellation.css" />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='16' y='22' font-family='serif' font-size='18' fill='%23f0e8d8' text-anchor='middle'>JH</text></svg>" />
+</head>
+
+<body class="constellation-page">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead is-scrolled">
+    <a href="index.html#top" class="monogram" aria-label="Home">
+      <span class="mono-mark">J</span><span class="mono-divider">·</span><span class="mono-mark">H</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#atelier">Atelier</a>
+      <a href="index.html#collection">Collection</a>
+      <a href="index.html#archives">Archives</a>
+      <a href="index.html#runway">Runway</a>
+      <a href="constellation.html" aria-current="page">Constellation</a>
+      <a href="index.html#inquiries">Inquiries</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- the living graph -->
+  <div class="stage">
+    <canvas id="constellation-canvas" aria-label="Interactive constellation of Jazmia Henry's work. Use the search field above to explore."></canvas>
+  </div>
+
+  <!-- intro veil -->
+  <div class="veil">
+    <span class="veil-serial">N° 06 / 06 · Things she's working on</span>
+    <h1 class="veil-title">The <em>Constellation</em></h1>
+    <p class="veil-sub">
+      Every repository, paper, patent, dataset, essay and talk — mapped as one mind.
+      Drag to roam. Scroll to zoom. Click a star to open it. Or simply ask.
+    </p>
+    <span class="veil-enter">Enter →</span>
+  </div>
+
+  <!-- the oracle -->
+  <div class="oracle">
+    <form class="oracle-field" onsubmit="return false;">
+      <span class="oracle-glyph" aria-hidden="true">✦</span>
+      <input
+        class="oracle-input" type="text" autocomplete="off" spellcheck="false"
+        placeholder="Ask the constellation — “Has she done reinforcement learning?”"
+        aria-label="Ask about Jazmia Henry's work"
+      />
+      <button class="oracle-submit" type="submit">Ask</button>
+    </form>
+    <div class="oracle-hint" aria-hidden="true"></div>
+    <div class="oracle-answer" role="status" aria-live="polite"></div>
+  </div>
+
+  <!-- level filter -->
+  <div class="levels" aria-label="Filter by depth">
+    <button class="level-chip" data-level="Expert" data-on="false">Expert</button>
+    <button class="level-chip" data-level="Advanced" data-on="false">Advanced</button>
+    <button class="level-chip" data-level="Intermediate" data-on="false">Intermediate</button>
+  </div>
+
+  <!-- legend -->
+  <div class="legend" aria-label="Constellations">
+    <div class="legend-title">The constellations</div>
+    <div class="legend-items"></div>
+  </div>
+
+  <!-- controls -->
+  <div class="stage-controls">
+    <span>Drag · Scroll · Click</span>
+    <button id="reset-view" type="button">Reset view</button>
+  </div>
+
+  <!-- detail panel -->
+  <aside class="panel" id="panel" aria-label="Detail"></aside>
+
+  <script src="knowledge.js"></script>
+  <script src="constellation.js" defer></script>
+</body>
+</html>
